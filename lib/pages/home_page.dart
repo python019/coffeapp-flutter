@@ -1,5 +1,6 @@
+import 'package:coffeappui/util/coffee_tile.dart';
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -45,9 +46,9 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Text(
             "Find the best voffe for you",
-            // style: GoogleFonts.bebasNeue(
-            //   fontSize: 56,
-            // ),
+            style: GoogleFonts.bebasNeue(
+              fontSize: 56,
+            ),
           ),
         ),
 
@@ -70,6 +71,15 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+        ),
+
+        SizedBox(
+          height: 25,
+        ),
+
+        Expanded(
+          child: ListView(
+              scrollDirection: Axis.horizontal, children: [CoffeeTile()]),
         ),
       ]),
     );
